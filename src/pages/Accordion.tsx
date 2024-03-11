@@ -16,7 +16,9 @@ export function Accordion({ data }: AccordionProps) {
     return (
         <div className="accordion">
             {data.map((el, i) => (
-                <AccordionItem curOpen={curOpen} onOpen={setCurOpen} title={el.title} text={el.text} num={i} key={el.title} />
+                <AccordionItem curOpen={curOpen} onOpen={setCurOpen} title={el.title} num={i} key={el.title}>
+                    {el.text}
+                </AccordionItem>
             ))}
         </div>
     );

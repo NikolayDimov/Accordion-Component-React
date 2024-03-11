@@ -3,12 +3,12 @@ import { Dispatch, SetStateAction } from "react";
 interface AccordionItemProps {
     num: number;
     title: string;
-    text: string;
     curOpen: number | null;
     onOpen: Dispatch<SetStateAction<number | null>>;
+    children: React.ReactNode;
 }
 
-export function AccordionItem({ num, title, text, curOpen, onOpen }: AccordionItemProps) {
+export function AccordionItem({ num, title, curOpen, onOpen, children }: AccordionItemProps) {
     const isOpen = num === curOpen;
 
     function handleToggle() {
@@ -21,7 +21,7 @@ export function AccordionItem({ num, title, text, curOpen, onOpen }: AccordionIt
             <p className="title">{title}</p>
             <p className="icon">{isOpen ? "-" : "+"}</p>
 
-            {isOpen && <div className="content-box">{text}</div>}
+            {isOpen && <div className="content-box">{children}</div>}
         </div>
     );
 }
