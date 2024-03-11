@@ -1,3 +1,8 @@
+# Accordion Items:
+
+![C388896F-E197-42B1-9841-51F41C332056_1_201_a](https://github.com/NikolayDimov/Accordion-Component-React/assets/114500017/1190b427-c8dd-4c9b-b277-0dba3a9c819b)
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
